@@ -1,6 +1,7 @@
 # Duck Generator
+https://duck-generator.vercel.app
 
-Generate DuckDuckGo Private Emails
+Generate DuckDuckGo Private Emails!
 
 ## Security Note
 
