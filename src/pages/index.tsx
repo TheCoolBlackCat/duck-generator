@@ -4,12 +4,13 @@ import Head from "next/head"
 import { trpc } from "../utils/trpc"
 import styles from "./index.module.css"
 import type {FormEvent} from "react"
-import { useEffect, useState} from "react"
+import { useEffect } from "react"
 import {toast} from "react-toastify"
+import useCookie from "react-use-cookie"
 
 const Home: NextPage = () => {
   const duck = trpc.generate.duck.useMutation()
-  const [value, setValue] = useState("")
+  const [value, setValue] = useCookie("token", "")
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
